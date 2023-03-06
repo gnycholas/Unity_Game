@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-	public float speed;
+	public float speed = 2f;
 	public Vector2 direction;
+
+    public float livingTime = 3f;
 
     // Start is called before the first frame update
     void Start()
     {
-    	    
+        Destroy(gameObject, livingTime);
     }
 
     // Update is called once per frame
